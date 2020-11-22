@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="modal-body">
                                 
-                                    <form action=" <?php echo(base_url("public/personas/editar/".$animales["id"]))?>" method="POST">
+                                    <form action=" <?php echo(base_url("public/animales/editar/".$animales["id"]))?>" method="POST">
                                         <div class="form-group">
                                             <label>Nombre:</label>
                                             <input type="text" class="form-control" name= "nombreEditar" value= "<?php echo ($animales['nombre'])?>" >
