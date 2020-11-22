@@ -91,7 +91,9 @@ class ControladorAnimales extends BaseController
 	  try {
 		
 		$modeloAnimales ->where ('id',$idEliminar) ->delete();
-		echo ("se ha eliminado el registro");
+		$mensaje="Animal eliminado con éxito";
+
+		return redirect()->to(base_url("public/animales/listar")) ->with('mensaje',$mensaje);
 	}
 	
 	catch (\Exception $e) {
@@ -116,7 +118,9 @@ class ControladorAnimales extends BaseController
 	try {
 
 		$modeloAnimales ->update($idEditar, $datosEnvio);
-		echo ("Animal editado con exito");
+		$mensaje="Animal editado con éxito";
+
+		return redirect()->to(base_url("public/animales/listar")) ->with('mensaje',$mensaje);
 		
 	}
 	
