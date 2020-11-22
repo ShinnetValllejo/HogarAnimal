@@ -56,52 +56,47 @@
 
 
 
-    <form class="mt-5" method="POST" action="<?php echo(base_url("public/animales/registro")) ?>">
-      <h5>REGISTRO DE ANIMALES:</h5>
-          <div class="row">
-
-              <div class="col-12 col-md-6">
-                <input type="text" class="form-control" placeholder="Nombre" name="nombre">
-              </div>
-
-              <div class="col-12 col-md-6">
-                <input type="number" class="form-control" placeholder="Edad" name="edad">
-              </div>
-
-              <div class="row mt-3">
+  <form class="mt-5" method="POST" action="<?php echo(base_url("public/animales/registro")) ?>">
+                <h5>REGISTRO DE ANIMALES:</h5>
+                <div class="row">
                     <div class="col-12 col-md-6">
-                      <input type="text" class="form-control" placeholder="Comida" name="comida">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombre">
                     </div>
-
+                    <div class="col-12 col-md-6">
+                        <input type="number" class="form-control" placeholder="Edad" name="edad">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" placeholder="Comida" name="comida">
+                    </div>
                     <div class="col-12 col-md-6" >
-                      <select class="form-control" name= "tipo">
-                      <option value="0">Domestico</option>
-                      <option value="1">Fauna Silvestre</option>
-                      </select>
+                        <select class="form-control" name= "tipo">
+                            <option value="0">Domestico</option>
+                            <option value="1">Fauna Silvestre</option>
+                        </select>
                     </div>
-              </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <textarea class="form-control" rows="3"name= "descripcion"></textarea>
+                    </div>   
+                </div>
 
-              <div class="row mt-3">
+                  <div class="row mt-3">
+                    <div class="col-12"> 
+                      <input type="text" class="form-control" placeholder="URL imagen" name="foto"> 
+                    </div> 
+                 </div>
 
-                <div class="col-12">
-                  <textarea class="form-control" rows="3"name= "descripcion"></textarea>
-                </div> 
+              <button type="submit" class="btn btn-info btn-block mt-3">registrar</button>
+            
+              <h5> <?php echo(session('mensaje')) ?> </h5>
 
-              </div>
+            </form>
+    </div>
 
-              <div class="row mt-3">
-                <div class="col-12"> 
-                  <input type="text" class="form-control" placeholder="URL imagen" name="foto"> 
-                </div> 
-              </div>
-              
-          </div>
-        <button type="submit" class="btn btn-info btn-block mt-3">registrar</button>
-              
-        <h5> <?php echo(session('mensaje')) ?> </h5>
-
-    </form>
-</header>
+    </header>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
